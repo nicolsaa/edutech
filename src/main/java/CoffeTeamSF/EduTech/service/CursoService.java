@@ -137,8 +137,8 @@ public class CursoService {
      */
     private List<EvaluacionUsuarioDTO> mapEvaluacionUsuarios(List<EvaluacionUsuario> evaluacionUsuarios) {
         return evaluacionUsuarios.stream().map(
-            usuario -> new EvaluacionUsuarioDTO(usuario.getId(), usuario.getUsuario().getNombre(), usuario.getCalificacion(), usuario.getFechaAsignacion())
-        ).collect(Collectors.toList());
+            usuario -> new EvaluacionUsuarioDTO(usuario.getUsuario().getNombre(), usuario.getCalificacion(), usuario.getFechaAsignacion()))
+        .collect(Collectors.toList());
     }
 
 

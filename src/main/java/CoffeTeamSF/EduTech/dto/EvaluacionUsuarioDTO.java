@@ -6,25 +6,23 @@ import java.time.LocalDateTime;
  * by Nicol Saavedra
  */
 public class EvaluacionUsuarioDTO {
-    private String id;
     private String nombre;
     private Double calificacion;
     private LocalDateTime fechaAsignacion;
     
-    public EvaluacionUsuarioDTO(String id, String nombre, Double calificacion, LocalDateTime fechaAsignacion) {
-        this.id = id;
+
+
+
+    public EvaluacionUsuarioDTO() {
+    }
+
+
+    public EvaluacionUsuarioDTO(String nombre, Double calificacion, LocalDateTime fechaAsignacion) {
         this.nombre = nombre;
         this.calificacion = calificacion;
         this.fechaAsignacion = fechaAsignacion;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNombre() {
         return nombre;

@@ -12,6 +12,8 @@ public class CalificacionDTO {
         this.calificacion = calificacion;
     }
 
+    public CalificacionDTO() {
+    }
 
     public String getEvaluacionId() {
         return evaluacionId;

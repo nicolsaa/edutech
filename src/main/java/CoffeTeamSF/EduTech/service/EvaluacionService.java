@@ -140,7 +140,7 @@ public class EvaluacionService {
         }
         evaluacionUsuario.setCalificacion(calificacion);
         evaluacionUsuarioRepository.save(evaluacionUsuario);
-        return String.format("Calificación" + calificacion + " asignada al alumno ID " + alumnoId + " en la evaluación " + evaluacionId);
+        return String.format("Calificación: " + calificacion + " asignada al alumno con ID: " + alumnoId + " en la evaluación: " + evaluacionId);
         }
 
 }

@@ -19,7 +19,9 @@ public class CursoListarDTO {
     private List<EvaluacionDTO> evaluaciones;
     private List<ResenaListarDTO> resenas;
 
-    public CursoListarDTO() {}
+    public CursoListarDTO() {
+        
+    }
 
     public CursoListarDTO(
         String sigla,

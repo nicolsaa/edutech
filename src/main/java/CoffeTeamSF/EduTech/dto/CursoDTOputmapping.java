@@ -11,6 +11,9 @@ public class CursoDTOputmapping {
     private String descripcion;
 
 
+    public CursoDTOputmapping() {
+    }
+    
     public String getNombre() {
         return nombre;
     }

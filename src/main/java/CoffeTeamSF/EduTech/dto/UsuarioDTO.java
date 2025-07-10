@@ -10,9 +10,6 @@ import CoffeTeamSF.EduTech.model.Incidencia;
 /*DTO DE USUARIO
  * BY: NICOL SAAVEDRA
  */
-
-
-
 //JsonPropertyOrder made by Vicente Aravena (permite manejar el orden en el que aparecen los atributos del usuario cuando se hace Get Usuarios en postman)
 @JsonPropertyOrder({
     "id",

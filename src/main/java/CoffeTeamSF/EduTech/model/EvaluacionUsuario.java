@@ -3,6 +3,8 @@ package CoffeTeamSF.EduTech.model;
 import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -15,7 +17,8 @@ import jakarta.persistence.Table;
 @Table(name = "evaluacion_usuario")
 public class EvaluacionUsuario {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "usuario_id")
@@ -31,13 +34,6 @@ public class EvaluacionUsuario {
     private LocalDateTime fechaAsignacion;
 
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public Usuario getUsuario() {
         return usuario;
@@ -69,6 +65,14 @@ public class EvaluacionUsuario {
 
     public void setFechaAsignacion(LocalDateTime fechaAsignacion) {
         this.fechaAsignacion = fechaAsignacion;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
 }

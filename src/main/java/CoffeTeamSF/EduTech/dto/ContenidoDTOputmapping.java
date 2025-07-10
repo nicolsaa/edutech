@@ -11,7 +11,11 @@ public class ContenidoDTOputmapping {
     private String descripcion;
     private String material;
 
+    
 
+    
+    public ContenidoDTOputmapping() {
+    }
 
     
     public String getNombre() {

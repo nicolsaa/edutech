@@ -27,6 +27,7 @@ public class ContenidoAlmacenarDTO {
         this.sigla = sigla;
         this.idProfesor = idProfesor;
     }
+    
 
     // Getters y Setters
     public String getNombre() {
