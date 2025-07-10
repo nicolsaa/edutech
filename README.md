@@ -1,1 +1,1 @@
-proyecto edutech duocuc
+proyecto edutech duocUc
