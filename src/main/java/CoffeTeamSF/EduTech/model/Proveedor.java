@@ -1,7 +1,11 @@
 package CoffeTeamSF.EduTech.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 
 //
@@ -16,6 +20,10 @@ public class Proveedor {
     private String nombre;
     private String contacto;
 
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    @JsonBackReference(value = "proveedor-usuario")
+    private Usuario usuario;
 
     public Proveedor(){
         this.id = "";
@@ -56,7 +64,12 @@ public class Proveedor {
         this.contacto = contacto;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
 
-    
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 
 }

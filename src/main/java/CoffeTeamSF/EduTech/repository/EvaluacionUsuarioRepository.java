@@ -6,7 +6,7 @@ import CoffeTeamSF.EduTech.model.Evaluacion;
 import CoffeTeamSF.EduTech.model.EvaluacionUsuario;
 import CoffeTeamSF.EduTech.model.Usuario;
 
-public interface EvaluacionUsuarioRepository extends JpaRepository <EvaluacionUsuario, String> {
+public interface EvaluacionUsuarioRepository extends JpaRepository <EvaluacionUsuario, Long> {
 
     boolean existsByUsuarioAndEvaluacion(Usuario usuario, Evaluacion evaluacion);
 

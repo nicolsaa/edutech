@@ -3,6 +3,7 @@ package CoffeTeamSF.EduTech.model;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,6 +13,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 
 /*CLASE INSCRIPCION 
@@ -46,6 +48,11 @@ public class Inscripcion {
     private LocalDate fechaInscripcion;
 
 
+    /*Relacion forma de pago by Ricardo Cuevas*/
+    @OneToOne
+    @JoinColumn(name = "id_forma_pago")
+    @JsonManagedReference
+    private FormaPago formaPago;
 
 
     public Inscripcion() {
@@ -89,6 +96,14 @@ public class Inscripcion {
 
     public void setFechaInscripcion(LocalDate fechaInscripcion) {
         this.fechaInscripcion = fechaInscripcion;
+    }
+
+    public FormaPago getFormaPago() {
+        return formaPago;
+    }
+
+    public void setFormaPago(FormaPago formaPago) {
+        this.formaPago = formaPago;
     }
 
 }

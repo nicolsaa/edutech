@@ -16,7 +16,6 @@ import CoffeTeamSF.EduTech.repository.FormaPagoRepository;
 //**************DESARROLLADO POR RICARDO CUEVAS**************************+ */
 //
 
-
 @Service
 public class FormaPagoService {
     @Autowired
@@ -24,7 +23,6 @@ public class FormaPagoService {
     @Autowired
     private FormaPagoRepository formaPagoRepository;
 
-    
 
     public String almacenar(FormaPago formaPago){
         FormaPago validacion = formaPagoRepository.findByDescripcion(formaPago.getDescripcion());
