@@ -26,6 +26,7 @@ public class InscripcionController {
     @Autowired
     private InscripcionService inscripcionService;
 
+
     @PostMapping
     public ResponseEntity<String> inscribirUsuarioAcurso(@RequestBody InscripcionDTO inscripcionDTO) {
         return ResponseEntity.ok()
@@ -47,7 +48,5 @@ public class InscripcionController {
         return ResponseEntity.ok(lista);
     }
 
-
-    
 
 }

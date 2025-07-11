@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
-
 import CoffeTeamSF.EduTech.dto.InscripcionDTO;
 import CoffeTeamSF.EduTech.dto.InscripcionFormapagoDTO;
 import CoffeTeamSF.EduTech.model.Cupon;
@@ -79,6 +78,7 @@ public class InscripcionService {
 
         return "usuario inscrito con exito";
     }
+
     /*Metodo para asignar forma de pago by RICARDO CUEVAS */
     public String asignarFormaPagoAInscripcion(Long idInscripcion, String idFormaPago) {
     Optional<Inscripcion> inscripcionOpt = inscripcionRepository.findById(idInscripcion);
@@ -127,6 +127,5 @@ public class InscripcionService {
             );
         }).toList();
     }
-
 
 }

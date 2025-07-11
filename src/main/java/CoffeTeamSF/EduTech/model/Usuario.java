@@ -3,6 +3,8 @@ package CoffeTeamSF.EduTech.model;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -58,8 +60,12 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
     private List<EvaluacionUsuario> evaluacionUsuarios = new ArrayList<>();
     
-    
+    /*Relacion con Proveedores by Ricardo cuevas */
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Proveedor> proveedores = new ArrayList<>();
 
+    
     public void agregarInscripcion(Inscripcion inscripcion) { 
         this.inscripciones.add(inscripcion);                  
         inscripcion.setUsuario(this);

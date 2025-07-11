@@ -49,7 +49,6 @@ public class UsuarioController {
         return usuarioService.listarUsuariosPorTipoNombre(tipo);
     }
 
-
     /*METODO QUE ASIGNA UN USUARIO A UN TIPO DE USUSARIO
      * BY: NICOL SAAVEDRA
      */

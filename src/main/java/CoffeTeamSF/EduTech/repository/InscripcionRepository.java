@@ -20,4 +20,6 @@ public interface InscripcionRepository extends JpaRepository<Inscripcion, Long> 
     Optional<List<Inscripcion>> findByUsuario(Usuario usuario);
 
 
+
+
 }
