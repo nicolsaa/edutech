@@ -72,4 +72,3 @@ public class InscripcionFormapagoDTO {
         this.porcentajeDescuento = porcentajeDescuento;
     }
 }
-

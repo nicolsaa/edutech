@@ -41,7 +41,7 @@ public class InscripcionController {
         return ResponseEntity.ok(respuesta);
     }
 
-    
+    /*By RICARDO CUEVAS */
     @GetMapping("/listarConFormaPago")
     public ResponseEntity<List<InscripcionFormapagoDTO>> listarConFormaPagoYDescuento() {
         List<InscripcionFormapagoDTO> lista = inscripcionService.obtenerInscripcionesConFormaPagoYDescuento();

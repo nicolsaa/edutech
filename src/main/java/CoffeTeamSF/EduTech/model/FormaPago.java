@@ -2,9 +2,12 @@ package CoffeTeamSF.EduTech.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 
 
 //
@@ -22,6 +25,10 @@ public class FormaPago {
     @OneToMany(mappedBy = "formaPago")
     private List<Cupon> cupons;
 
+
+    @OneToOne(mappedBy = "formaPago")
+    @JsonBackReference
+    private Inscripcion inscripcion;
 
 
     public FormaPago(){
@@ -51,6 +58,14 @@ public class FormaPago {
 
     public void setCupons(List<Cupon> cupons) {
         this.cupons = cupons;
+    }
+
+    public Inscripcion getInscripcion() {
+        return inscripcion;
+    }
+
+    public void setInscripcion(Inscripcion inscripcion) {
+        this.inscripcion = inscripcion;
     }
 
     

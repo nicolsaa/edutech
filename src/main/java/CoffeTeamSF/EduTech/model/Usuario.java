@@ -159,6 +159,14 @@ public class Usuario {
         this.evaluacionUsuarios = evaluacionUsuarios;
     }
 
+    public List<Proveedor> getProveedores() {
+        return proveedores;
+    }
+
+    public void setProveedores(List<Proveedor> proveedores) {
+        this.proveedores = proveedores;
+    }
+
 }
 
 

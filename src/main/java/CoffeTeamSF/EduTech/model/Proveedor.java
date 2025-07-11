@@ -72,4 +72,7 @@ public class Proveedor {
         this.usuario = usuario;
     }
 
+
+    
+
 }
